@@ -1,0 +1,16 @@
+{% extends "quiz/base.html" %}
+
+{% block content %}
+<h3>Quiz home!</h3>
+    {% for quiz in quizzes %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                <a class="mr-2" href="#">{{ quiz.title }}</a>
+                </div>
+                <h2><a class="article-title" href="#">{{ quiz.title }}</a></h2>
+                <p class="article-content">{{ quiz.instructions }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
